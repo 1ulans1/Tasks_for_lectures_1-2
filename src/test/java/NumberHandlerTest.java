@@ -24,4 +24,3 @@ class NumberHandlerTest {
         assertArrayEquals(extended, actual);
     }
 }
-

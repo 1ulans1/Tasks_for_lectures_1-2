@@ -11,9 +11,10 @@ public class HashtagHandler {
     }
 
     public List<String> topFive() {
+
         HashMap<String, Integer> dict = new HashMap<>();
 
-        this.onlyTags().forEach(setWord -> setWord.forEach(
+        onlyTags().forEach(setWord -> setWord.forEach(
                 word -> dict.put(
                         word,
                         dict.containsKey(word) ? dict.get(word) + 1 : 1
