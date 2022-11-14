@@ -29,9 +29,8 @@ class HashtagHandlerTest {
     }
 
     @Test
-    public void emptyTest() {
+    public void emptyListTest() {
         List<String> data = List.of();
-
 
         List<String> actual = new HashtagHandler(data).topFive();
         List<String> extended = List.of();
@@ -40,7 +39,7 @@ class HashtagHandlerTest {
     }
 
     @Test
-    public void test() {
+    public void oneHashtabTest() {
         List<String> data = List.of("##hello");
 
         List<String> actual = new HashtagHandler(data).topFive();
@@ -50,7 +49,7 @@ class HashtagHandlerTest {
     }
 
     @Test
-    public void emptyTest1() {
+    public void notHashtagTest() {
         List<String> data = List.of("#####");
 
         List<String> actual = new HashtagHandler(data).topFive();
